@@ -2,7 +2,8 @@ TEMPLATE = app
 
 QT += qml quick
 
-SOURCES += main.cpp
+HEADERS += info.h
+SOURCES += main.cpp info.cpp
 
 RESOURCES += qml.qrc
 
