@@ -7,7 +7,7 @@ Window {
     height: 360
 
     Text {
-        text: qsTr("Hello World")
+        text: _info.a
         anchors.centerIn: parent
     }
 
@@ -26,6 +26,26 @@ Window {
             anchors.fill: parent
             onClicked: {
                 Qt.quit();
+            }
+        }
+    }
+
+    Rectangle {
+        id: btn_cmd
+        color: "blue"
+        width: 40; height: 40
+        anchors {
+            left: btn_quit.right
+        }
+        Text {
+            text: "CMD"
+            anchors.fill: parent
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                // Or you can use _info.setA(3)
+                _info.a = 3
             }
         }
     }
